@@ -7,7 +7,11 @@ This gem gives you a simple too to generate adr files as markdown https://github
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rladr'
+group :development do
+  # ...
+
+  gem 'rladr'
+end
 ```
 
 And then execute:
@@ -20,13 +24,13 @@ Or install it yourself as:
 
 ## Usage
 
-```
-# Initialize adr directory
-rladr init <directory>
+First you need to initialize the directory where ards will be stored
 
-# Create a new ADR
-rladr new <title>
-```
+    $ rladr init [directory]
+
+Then create your adrs
+
+    $ rladr new <title>
 
 ## Development
 
@@ -36,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rladr. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/andrewaguiar/rladr. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
