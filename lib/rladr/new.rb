@@ -15,19 +15,14 @@ module Rladr
 
       def next_id(path)
         ids = Dir["./#{path}/*.md"].map do |filename|
-          filename
-            .split('/')
-            .last
-            .split('-')
-            .first
-            .to_i
+          filename.split('/')[-1].split('-')[0].to_i
         end
 
         (ids + [0]).max + 1
       end
 
       def note_filename(id, path, title)
-        "#{path}/#{"%05d" % id}-#{title.parameterize}.md"
+        "#{path}/#{"%05d" % id}-#{title.downcase.gsub(' ', '-')}.md"
       end
 
       def note_content(id, title)

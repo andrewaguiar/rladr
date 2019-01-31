@@ -1,4 +1,3 @@
-require 'active_support/all'
 require 'rladr/version'
 require 'rladr/initializer'
 require 'rladr/new'
