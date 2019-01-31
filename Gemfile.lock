@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rladr (0.1.0)
+    rladr (1.0.0)
       activesupport
 
 GEM
